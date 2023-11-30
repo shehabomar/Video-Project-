@@ -1,7 +1,7 @@
-// Array.from(feature from ES6)
-let sliderImages = Array.from(document.querySelectorAll(".slider-container video"));
+let sliderVideos = Array.from(document.querySelectorAll(".slider-container iframe"));
 
-let slideCount = sliderImages.length;
+let slideCount = sliderVideos.length;
+
 //set current slide
 let currentSlide =1;
 //slide number in string element
@@ -81,7 +81,7 @@ function theChecker(){
     
     //set  active class on current slide
     
-    sliderImages[currentSlide - 1].classList.add('active');
+    sliderVideos[currentSlide - 1].classList.add('active');
     
     // set active class on current pagination item
     
@@ -113,7 +113,7 @@ function theChecker(){
 function removeAllActive(){
 
     // loop through images
-    sliderImages.forEach(function(video){
+    sliderVideos.forEach(function(video){
         video.classList.remove('active');
     })
 
@@ -123,25 +123,33 @@ function removeAllActive(){
  
 })
 }
+var video = document.getElementById('documentaryVideo');
 
-document.addEventListener('DOMContentLoaded', function() {
-    let video = document.getElementById('video-showcase');
-    let victum1 = document.getElementById('victum1');
-
-    if (video && victum1) {
-        victum1.addEventListener('click', function() {
-            // Set the desired time (in seconds) here
-            let desiredTime = 5; 
-            if (desiredTime <= video.duration) {
-                video.currentTime = desiredTime;
-                console.log('Video currentTime set to', desiredTime, 'seconds');
-            } else {
-                console.log('Desired time exceeds video duration');
-            }
-        });
-    } else {
-        if (!video) console.error('Video element not found');
-        if (!victum1) console.error('Button element not found');
-    }
+document.getElementById('victum1').addEventListener('click', function() {
+    video.currentTime = 5; 
 });
 
+document.getElementById('witness1').addEventListener('click', function() {
+    video.currentTime = 5; 
+});
+
+document.getElementById('victum2').addEventListener('click', function() {
+    video.currentTime = 5; 
+});
+
+document.getElementById('witness2').addEventListener('click', function() {
+    video.currentTime = 5; 
+});
+
+
+document.getElementById('victum3').addEventListener('click', function() {
+    video.currentTime = 5; 
+});
+
+document.getElementById('witness3').addEventListener('click', function() {
+    video.currentTime = 5; 
+});
+
+document.getElementById("criminal").addEventListener("click", function() {
+    document.getElementById("videoFrame").src = "";
+});
