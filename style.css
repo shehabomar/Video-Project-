@@ -11,7 +11,7 @@ header {
     border-radius: 0 0 20px 20px;
     display: flex;
     justify-content: center; 
-    border-bottom: 4px solid #333;
+    border-bottom: 4px solid #f8d41f;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     position: fixed;
@@ -57,29 +57,84 @@ h2 {
     color: #003366;
     text-align: center;
 }
+
 #video-showcase{
-    margin-top: 160px;
+    margin-top: 140px;
 }
+
 #video-showcase , #behind-scenes{ 
     display: grid;
     justify-content: center;
     align-items: center;
 }
 
-#video-showcase video {
+#video-showcase p{
+    width:800px;
+    text-align: center;
+    margin: auto;   
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#video-showcase iframe {
     border: 3px solid #003366;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin:auto;
+    width: 800px;
+    height: 550px;
 }
+
+.button-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 10px; 
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width:10%;
+    margin-left: 20px;
+    border-radius: 20px;
+}
+
+.card img{
+    border-radius: 20px 20px 0 0;
+    width:100%;
+    height:100%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.container button{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin:0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
 /* Slider Section */
 .slider-container {
     margin: 10px auto;
-    width: 560px;
-    height: 450px;
+    width: 800px;
+    height: 550px;
     position: relative;
 }
 
-.slider-container video {
+.slider-container iframe {
     position: absolute;
     width: 100%;
     height: 100%; 
@@ -91,7 +146,7 @@ h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-.slider-container video.active {
+.slider-container iframe.active {
     opacity: 1;
 }
 
