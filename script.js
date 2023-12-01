@@ -126,28 +126,28 @@ function removeAllActive(){
 var video = document.getElementById('documentaryVideo');
 
 document.getElementById('victum1').addEventListener('click', function() {
-    video.currentTime = 5; 
+    video.currentTime = 46; 
 });
 
 document.getElementById('witness1').addEventListener('click', function() {
-    video.currentTime = 5; 
+    video.currentTime = 279; 
 });
 
 document.getElementById('victum2').addEventListener('click', function() {
-    video.currentTime = 5; 
+    video.currentTime = 80; 
 });
 
 document.getElementById('witness2').addEventListener('click', function() {
-    video.currentTime = 5; 
+    video.currentTime = 304; 
 });
 
 
 document.getElementById('victum3').addEventListener('click', function() {
-    video.currentTime = 5; 
+    video.currentTime = 95; 
 });
 
 document.getElementById('witness3').addEventListener('click', function() {
-    video.currentTime = 5; 
+    video.currentTime = 253; 
 });
 
 document.getElementById("criminal").addEventListener("click", function() {
