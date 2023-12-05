@@ -123,9 +123,10 @@ function removeAllActive(){
  
 })
 }
-var video = document.getElementById('documentaryVideo');
 
-document.getElementById('victum1').addEventListener('click', function() {
+var video = document.getElementById('videoFrame');
+
+document.getElementById('victim1').addEventListener('click', function() {
     video.currentTime = 46; 
 });
 
@@ -133,7 +134,7 @@ document.getElementById('witness1').addEventListener('click', function() {
     video.currentTime = 279; 
 });
 
-document.getElementById('victum2').addEventListener('click', function() {
+document.getElementById('victim2').addEventListener('click', function() {
     video.currentTime = 80; 
 });
 
@@ -141,14 +142,14 @@ document.getElementById('witness2').addEventListener('click', function() {
     video.currentTime = 304; 
 });
 
-
-document.getElementById('victum3').addEventListener('click', function() {
+document.getElementById('victim3').addEventListener('click', function() {
     video.currentTime = 95; 
 });
 
 document.getElementById('witness3').addEventListener('click', function() {
     video.currentTime = 253; 
 });
+
 
 document.getElementById("criminal").addEventListener("click", function() {
     document.getElementById("videoFrame").src = "https://drive.google.com/file/d/1YxU30WOY436t-Edj5qCnBlX7WCAiw0PH/preview";
