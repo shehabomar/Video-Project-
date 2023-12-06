@@ -1,3 +1,30 @@
+let videoPlayed = false; // Flag to track if the first video is played
+
+// Initially disable the second button
+document.getElementById("criminal").disabled = true;
+
+// Event listener for the first video button
+document.getElementById("story").addEventListener("click", function() {
+    document.getElementById("videoFrame").src = "https://drive.google.com/file/d/1id3IVB-ySHoz4LZBgwJWS6ov9mABVKdh/preview";
+    setTimeout(function() {
+        videoPlayed = true; // Update the flag after a set time
+        document.getElementById("criminal").disabled = false; // Enable the second button
+    }, 200000);
+});
+
+
+
+// Event listener for the second button
+document.getElementById("criminal").addEventListener("click", function() {
+    if(videoPlayed) { // Check if the first video button has been clicked and time elapsed
+        document.getElementById("videoFrame").src = "https://drive.google.com/file/d/1YxU30WOY436t-Edj5qCnBlX7WCAiw0PH/preview";
+    } else {
+        alert("Please wait for the first video to finish before proceeding."); // Alert if the time hasn't elapsed
+    }
+});
+
+
+
 let sliderVideos = Array.from(document.querySelectorAll(".slider-container iframe"));
 
 let slideCount = sliderVideos.length;
@@ -123,34 +150,3 @@ function removeAllActive(){
  
 })
 }
-
-var video = document.getElementById('videoFrame');
-
-document.getElementById('victim1').addEventListener('click', function() {
-    video.currentTime = 46; 
-});
-
-document.getElementById('witness1').addEventListener('click', function() {
-    video.currentTime = 279; 
-});
-
-document.getElementById('victim2').addEventListener('click', function() {
-    video.currentTime = 80; 
-});
-
-document.getElementById('witness2').addEventListener('click', function() {
-    video.currentTime = 304; 
-});
-
-document.getElementById('victim3').addEventListener('click', function() {
-    video.currentTime = 95; 
-});
-
-document.getElementById('witness3').addEventListener('click', function() {
-    video.currentTime = 253; 
-});
-
-
-document.getElementById("criminal").addEventListener("click", function() {
-    document.getElementById("videoFrame").src = "https://drive.google.com/file/d/1YxU30WOY436t-Edj5qCnBlX7WCAiw0PH/preview";
-});
